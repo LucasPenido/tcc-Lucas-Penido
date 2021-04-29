@@ -1,14 +1,16 @@
 \chapter[Introdução]{Introdução}
 
+Apesar de estarmos em contato com a criptografia diariamente e ser um assunto muito discutido hoje em dia devido ao volume de dados e informações circulando a todo o tempo, sua história começa há muito tempo. Já na idade média haviam sistemas criptográficos que consistiam em realizar a troca de letra por símbolos ou mudança de posição entre os caracteres, a mais conhecida da época é a cifra de César. Com o passar do tempo a cifração de uma mensagem foi se aprimorando e formas mais elaboradas de realizar permutações e substituições foram sendo utilizadas. Essa nova forma de cifração foi utilizada durante a segunda guerra mundial e ficou bastante conhecida pela máquina Enigma criada pelos alemães. Com o avanço da computação, algoritmos de permutação e substituição foram se tornando cada vez mais elaborados e difíceis de serem quebrados, um dos fatores para isso é a utilização de chaves criptográficas, dessa forma deu-se início aos sistemas de chave simétrica. Porém esse sistema não permite a verificação da identidade do remetente da mensagem, e não há garantia do armazenamento das chaves em ambientes confiáveis. 
+
 \section{Justificativa}
 
 A assinatura digital é o desenvolvimento mais importante a partir dos trabalhos sobre criptografia de chave pública, sendo utilizada como garantia de proteção em transações eletrônicas dentre outros serviços na Web. A assinatura digital trouxe uma série de benefícios, como a criação de Certificados Digitais, assegurando e facilitando a identificação de pessoas físicas, jurídicas, ou até mesmo de máquinas na internet. 
 
 No âmbito das assinaturas digitais, o Algoritmo de Assinatura Digital da Curva Elíptica de Edwards (EdDSA) tem se tornado cada vez mais utilizado, uma vez que tem se demonstrado mais simples, mais seguro e mais rápido do que outros algoritmos, como o Algoritmo de Assinatura Digital de Curvas Elípticas (ECDSA), além de depender da dificuldade de se calcular logaritmos discretos em curvas elípticas. 
 
-ICP-Brasil optou por recomendar a utilização de EdDSA na sua busca pela implementação de algoritmos e suítes de assinatura digitais, com a finalidade de desburocratizar e agilizar, com a segurança técnica e jurídica necessária, todos os procedimentos e segmentos da sociedade brasileira, diminuindo os custos e fraudes, tornando a vida do cidadão melhor \cite{iti2018}.
+ICP-Brasil optou por recomendar a utilização do algoritmo EdDSA na sua busca pela implementação de algoritmos e suítes de assinatura digitais. Essa abordagem tem a finalidade de desburocratizar e agilizar, com a segurança técnica e jurídica necessária, todos os procedimentos e segmentos da sociedade brasileira, diminuindo os custos e fraudes, tornando melhor a vida do cidadão \cite{iti2018}.
 
-Este trabalho tem como proposta implementar os algoritmos de assinatura definidos pelo ICP-Brasil na linguagem de programação Dart. Essa linguagem foi recentemente desenvolvida pela Google e vem tomando bastante espaço no mundo da tecnologia por conta da tecnologia Flutter. 
+Este trabalho tem como proposta implementar os algoritmos de assinatura definidos pelo ICP-Brasil na linguagem de programação Dart. Essa linguagem foi recentemente desenvolvida pela Google e vem tomando bastante espaço no mundo da tecnologia. 
 
 \section{Problema de Pesquisa}
 
@@ -16,5 +18,14 @@ Este trabalho tem como proposta implementar os algoritmos de assinatura definido
 
 \subsection{Objetivo Geral}
 
+O objetivo principal da pesquisa é desenvolver um módulo na linguagem de programação Dart que implementa os algoritmos EdDSA definidos pela ICP-Brasil.
+
 \subsection{Objetivos Específicos}
 
+\begin{itemize}
+    \item Estudar sistema criptográfico de chave pública.
+    \item Estudar o algoritmo ECDSA para assinaturas digitais.
+    \item Desenvolver um módulo para assinar e verificar as assinaturas digitais que possa ser utilizado na linguagem de programação Dart.
+    \item Realizar uma prova de conceito da implementação na linguagem Dart e na linguagem Python. 
+\end{itemize}
+    
