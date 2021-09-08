@@ -1,0 +1,46 @@
+\chapter[Introdução]{Introdução}
+
+A criptografia, um dos campos da criptologia, diz respeito à troca privada de mensagens entre dois participantes, no qual um adversário não deve saber nada sobre o conteúdo dessas mensagens \cite{cryptRivest}. Porém a criptografia engloba não somente a confidencialidade mas também a integridade, autenticação e o não repúdio da mensagem.
+
+Apesar de estarmos em contato com a criptografia diariamente e ser um assunto muito discutido hoje em dia devido ao grande volume de dados e informações circulando a todo o momento, sua história começa há muito tempo. 
+
+A criptografia clássica tem seu início nos povos antigos e passa pela Idade Média onde haviam sistemas criptográficos que consistiam em realizar a troca de letras por símbolos ou a mudança de posição entre os caracteres. O sistema mais conhecido da época é a cifra de César, criada pelo Imperador Júlio César, que consistia na substituição de uma letras do alfabeto pela terceira a diante. 
+
+Já na Idade Moderna, deu-se início ao uso de uma chave para realizar a cifração de uma mensagem, um exemplo é a Cifra de Vigenère. Essa cifra consiste em deslocar cada letra do alfabeto um número fixo de lugares e esse deslocamento é determinado por uma chave, por exemplo, se uma mensagem fosse cifrada pela chave ``abc'' a primeira letra da mensagem não seria deslocada, a segunda seria deslocada uma posição, a terceira duas posições e assim sucessivamente até todas as letras da mensagem serem deslocadas. 
+
+Com o passar do tempo, a cifração de uma mensagem foi sendo aprimorada junto ao desenvolvimento de máquinas, formas mais elaboradas de realizar permutações e substituições foram sendo criadas e deram início à criptografia moderna. Essa nova forma de cifração foi utilizada durante a segunda guerra mundial e ficou bastante conhecida pela máquina Enigma criada pelos alemães. 
+
+Com o avanço da computação, algoritmos de permutação e substituição foram se tornando cada vez mais complexos e difíceis de serem quebrados, dessa forma, deu-se início à aplicação extensiva dos sistemas criptográficos de chave simétrica, que consistem em cifrar e decifrar uma mensagem utilizando a mesma chave criptográfica. Exemplos de criptografia simétrica são: \textit{Data Encryption Standard}, \textit{Advanced Encryption Standard} e Salsa20. Porém esses sistemas não garantem o armazenamento das chaves de forma confiável, além de não permitirem a verificação da identidade do remetente da mensagem.
+
+Dessa forma, deu-se início ao desenvolvimento da criptografia de chave assimétrica ou chave pública, que consiste na cifração e decifração por meio de chaves distintas. Sendo assim, foi possível a criação de algoritmos que resolviam os problemas dos sistemas de chave simétrica. Alguns sistemas de chave assimétrica fornecem métodos de criptografia para realizar, de forma segura, a trocas de chaves em canais públicos, como o algoritmo de Diffie–Hellman, outros fornecem assinaturas digitais, como o DSA, ECDSA e EdDSA, e alguns fornecem ambos, além de realizar cifração de mensagens, como o RSA.
+
+\section{Justificativa}
+
+A assinatura digital é um dos campos de estudo dos sistemas criptográficos de chave pública, sendo utilizada como garantia de proteção em transações eletrônicas dentre outros serviços na Web. A assinatura digital trouxe uma série de benefícios, como a criação de Certificados Digitais, assegurando e facilitando a identificação de pessoas físicas, jurídicas, ou até mesmo de máquinas na internet. 
+
+No âmbito das assinaturas digitais, o Algoritmo de Assinatura Digital da Curva Elíptica de Edwards (EdDSA) tem se tornado cada vez mais utilizado, uma vez que tem se demonstrado mais simples, mais seguro e mais rápido do que outros algoritmos, além de depender da dificuldade de se calcular logaritmos discretos em curvas elípticas. 
+
+A ICP-Brasil optou por recomendar a utilização do algoritmo EdDSA na sua busca pela implementação de algoritmos e suítes de assinatura digitais. Essa abordagem tem a finalidade de desburocratizar e agilizar, com a segurança técnica e jurídica necessária, todos os procedimentos e segmentos da sociedade brasileira, diminuindo os custos e fraudes, tornando melhor a vida do cidadão \cite{iti2018}.
+
+Este trabalho tem como proposta implementar os algoritmos de assinatura digital Ed448 e Ed521, respectivamente utilizados nas Cadeias V6 e V7 da ICP-Brasil na linguagem de programação Dart. Essa linguagem foi recentemente desenvolvida pela Google e vem tomando bastante espaço no mundo da programação.
+
+% \section{Problema de Pesquisa}
+
+% Tendo como objetivo guiar o trabalho, foi definido o seguinte problema de pesquisa: como implementar os algoritmos Ed448 e Ed521 na linguagem de programação Dart? 
+
+\section{Objetivos}
+
+\subsection{Objetivo Geral}
+
+O objetivo principal da pesquisa é desenvolver um módulo na linguagem de programação Dart que implementa os algoritmos EdDSA utilizados pela ICP-Brasil.
+
+\subsection{Objetivos Específicos}
+
+\begin{itemize}
+    \item Estudar sistema criptográfico de chave pública.
+    \item Estudar os algoritmos ECDSA e EdDSA para assinaturas digitais.
+    \item Desenvolver um módulo para assinar e verificar as assinaturas digitais na linguagem de programação Dart.
+    \item Implementar um guia do algoritmo EdDSA.
+    \item Realizar uma prova de conceito da implementação na linguagem Dart e na linguagem Python. 
+\end{itemize}
+    

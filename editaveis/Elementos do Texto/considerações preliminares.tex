@@ -1,0 +1,62 @@
+\chapter[Considerações Preliminares]{Considerações Preliminares}
+
+\section{Conclusão}
+
+Inicialmente foram identificadas algumas bibliotecas em Dart que implementam apenas o algoritmo Ed25519, as duas mais maduras são: a \href{https://pub.dev/packages/cryptography}{Cryptography} e a \href{https://pub.dev/packages/pinenacl}{PineNaCl}. Para fins de estudo e de validação, foram realizadas validações cruzadas entre a biblioteca Cryptography e a \href{https://pynacl.readthedocs.io/en/1.4.0/signing/}{PyNaCl} escrita em Python, onde se assinava uma mensagem em uma biblioteca e a verificava na outra.
+
+Em seguida, iniciou-se um estudo com o certificado digital da AC Raiz da ICP-Brasil v6, no qual é utilizado o algoritmo Ed448. Já que não foi identificada nenhuma biblioteca que realizasse a leitura e verificação desse certificado em Dart,  foi utilizada a biblioteca \href{https://cryptography.io/en/latest/x509/reference/}{Cryptography} em Python para realização do estudo.
+
+Houve uma tentativa de verificação do certificado digital da AC Raiz da ICP-Brasil v7, o qual é utilizado o algoritmo Ed521, porém não foi encontrado nenhuma biblioteca que realizasse sua verificação. No entanto, foi identificado a biblioteca \href{https://github.com/cslashm/ECPy}{ECPy} em Python, que possui a implementação EdDSA e é bastante flexível. Dessa forma, foi acrescentado o algoritmo Ed521 à ela e assim conseguiu-se realizar a verificação desse cerificado digital, além de ser possível gerar chaves públicas e privadas e realizar a assinatura de mensagens. 
+
+A presente proposta de trabalho, buscará a criação de módulos, escritos na linguagem de programação Dart, que implementem os algoritmos Ed448 e Ed521. A relevância dessa implementação se dá pela falta de um componente de software que implemente tais algoritmos nessa linguagem.
+
+\section{Cronograma}
+
+A seguir serão apresentadas as atividades executadas no período de elaboração do TCC 1, além das atividades planejadas para serem concluídas durante o TCC 2.
+
+\begin{enumerate}
+    \item Estudo sobre assinaturas digitais;
+    \item Estudo sobre a linguagem Dart;
+    \item Estudo sobre algoritmos definidos pela ICP-Brasil (Ed25519, Ed448 e Ed521);
+    \item Implementação do protótipo em Python do algoritmo Ed521;
+    \item Redigir o trabalho referente ao TCC 1;
+    \item Apresentação do TCC 1;
+    \item Desenvolver os módulos em Dart;
+    \item Realizar testes e melhorias no módulo;
+    \item Redigir o trabalho referente ao TCC 2;
+    \item Apresentação do TCC 2;
+\end{enumerate}
+
+Para uma melhor apresentação das atividades e suas datas, as mesmas serão apresentadas em duas tabelas. Na Tabela \ref{cronoTCC1} estão definidas as atividades realizadas durante o desenvolvimento do TCC 1. Na Tabela \ref{cronoTCC2} está estabelecido o planejamento inicial das atividades que serão realizadas durante o TCC 2.
+
+\begin{table}[H]
+\caption{Cronograma referente ao TCC 1}
+\label{cronoTCC1}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+ & \multicolumn{1}{l|}{\textbf{Fevereiro}} & \multicolumn{1}{l|}{\textbf{Março}} & \multicolumn{1}{l|}{\textbf{Abril}} & \multicolumn{1}{l|}{\textbf{Maio}} \\ \hline
+Estudo sobre assinaturas digitais & X & X &  &  \\ \hline
+Estudo sobre a linguagem Dart & X & X &  &  \\ \hline
+Estudo sobre algoritmos definidos pela ICP-Brasil (Ed25519, Ed448 e Ed521) &  & X & X &  \\ \hline
+Implementação do protótipo em Python do algoritmo Ed521 &  &  & X &  \\ \hline
+Redigir o trabalho referente ao TCC 1 &  & X & X &  \\ \hline
+Apresentação do TCC 1 &  &  &  & X \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[H]
+\caption{Cronograma referente ao TCC 2}
+\label{cronoTCC2}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+ & \multicolumn{1}{l|}{\textbf{Julho}} & \multicolumn{1}{l|}{\textbf{Agosto}} & \multicolumn{1}{l|}{\textbf{Setembro}} & \multicolumn{1}{l|}{\textbf{Outubro}} & \multicolumn{1}{l|}{\textbf{Novembro}} \\ \hline
+Desenvolver os módulos em Dart & X & X & X &  &  \\ \hline
+Realizar testes e melhorias no módulo &  & X & X & X &  \\ \hline
+Redigir o trabalho referente ao TCC 2 &  & X & X & X &  \\ \hline
+Apresentação do TCC 2 &  &  &  &  & X \\ \hline
+\end{tabular}%
+}
+\end{table}
